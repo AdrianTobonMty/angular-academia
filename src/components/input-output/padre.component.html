@@ -6,6 +6,14 @@
   <button class="btn btn-info" (click)="restar()">Restar</button>
 </div>
 
-<app-hijo [contadorHijo]="contador">
+<hr>
+<div>
+  <label for="">Prueba</label>
+  <input type="text" [(ngModel)]="cadena">
+  <br>
+  <p>{{ cadena }}</p>
+</div>
+
+<app-hijo [contadorHijo]="contador" (enviarContador)="contador = $event">
 
 </app-hijo>

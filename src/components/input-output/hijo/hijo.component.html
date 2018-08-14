@@ -6,3 +6,7 @@
   <button class="btn btn-primary" (click)="aumentarHijo()">Aumentar</button>
   <button class="btn btn-info" (click)="restarHijo()">Restar</button>
 </div>
+
+<hr>
+
+<app-nieto [contadorNieto]="contadorHijo" (resetEvent)="getReset($event)"></app-nieto>

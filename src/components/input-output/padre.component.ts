@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-padre',
@@ -6,13 +6,20 @@ import { Component } from '@angular/core';
   styleUrls: ['padre.component.scss']
 })
 
-export class PadreComponent {
+export class PadreComponent implements OnInit {
 
   contador: number;
+  cadena: string;
 
   constructor() {
 
+    this.cadena = 'Texto prueba';
     this.contador = 10;
+    console.log('contador: ', this.contador);
+  }
+
+  ngOnInit() {
+    console.log('oninit');
   }
 
   aumentar(): void {

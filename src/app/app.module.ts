@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 // Components
 import { AppComponent } from './app.component';
@@ -11,6 +11,7 @@ import { TodosComponent } from './todos/todos.component';
 import { PadreComponent } from '../components/input-output/padre.component';
 import { HijoComponent } from '../components/input-output/hijo/hijo.component';
 import { ReactiveFormsComponent } from '../components/reactive-forms/reactive-forms.component';
+import { NietoComponent } from '../components/input-output/nieto/nieto.component';
 
 // Services
 import { TodosService } from '../services/todos.services';
@@ -31,12 +32,14 @@ const ROUTES: Routes = [
     TodoComponent,
     PadreComponent,
     HijoComponent,
-    ReactiveFormsComponent
+    ReactiveFormsComponent,
+    NietoComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     ReactiveFormsModule,
+    FormsModule,
     RouterModule.forRoot(ROUTES)
   ],
   providers: [
