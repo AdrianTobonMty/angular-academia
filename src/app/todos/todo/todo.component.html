@@ -1,0 +1,22 @@
+<p *ngIf="!todo">Loading...</p>
+<br>
+<a [routerLink]="['/todos']">Back</a>
+<br>
+<table class="table table-hover" *ngIf="todo">
+  <thead>
+    <tr>
+      <th scope="col">userId</th>
+      <th scope="col">Id</th>
+      <th scope="col">Title</th>
+      <th scope="col">Completed</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{todo.userId}}</td>
+      <td>{{todo.id}}</td>
+      <td>{{todo.title}}</td>
+      <td>{{todo.completed}}</td>
+    </tr>
+  </tbody>
+</table>

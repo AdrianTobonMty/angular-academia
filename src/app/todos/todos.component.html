@@ -1,0 +1,20 @@
+
+<p *ngIf="!todos">Loading...</p>
+<table class="table table-hover" *ngIf="todos">
+  <thead>
+    <tr>
+      <th scope="col">userId</th>
+      <th scope="col">Id</th>
+      <th scope="col">Title</th>
+      <th scope="col">Completed</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let todo of todos" [routerLink]="['/todos', todo.id]">
+      <td>{{todo.userId}}</td>
+      <td>{{todo.id}}</td>
+      <td>{{todo.title}}</td>
+      <td>{{todo.completed}}</td>
+    </tr>
+  </tbody>
+</table>

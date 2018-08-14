@@ -1,0 +1,11 @@
+<div class="text-center">
+  <h1>Padre</h1>
+  <p>Contador:</p>
+  <p>{{ contador }}</p>
+  <button class="btn btn-primary" (click)="aumentar()">Aumentar</button>
+  <button class="btn btn-info" (click)="restar()">Restar</button>
+</div>
+
+<app-hijo [contadorHijo]="contador">
+
+</app-hijo>
